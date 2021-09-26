@@ -1,13 +1,13 @@
-package no.bouvet.pultbooking;
+package no.bouvet.deskbooking;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class PultBookingApplication {
+public class DeskBookingApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(PultBookingApplication.class, args);
+		SpringApplication.run(DeskBookingApplication.class, args);
 	}
 
 }

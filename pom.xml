@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>no.bouvet</groupId>
-	<artifactId>pult-booking</artifactId>
+	<artifactId>desk-booking</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>pult-booking</name>
-	<description>Spring boot application for booking pults</description>
+	<name>desk-booking</name>
+	<description>Spring boot application for booking desks</description>
 	<properties>
 		<java.version>11</java.version>
 	</properties>
