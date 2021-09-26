@@ -29,12 +29,8 @@ public class Office {
     @Override
     public String toString() {
         return String.format(
-                "Office[id=%d, name='%s', location='%s']",
-                id, name, location);
-    }
-
-    public Long getId() {
-        return id;
+                "Office[name='%s', location='%s']",
+                name, location);
     }
 
     public String getName() {
@@ -47,5 +43,9 @@ public class Office {
 
     public List<Desk> getDesks() {
         return desks;
+    }
+
+    public Long getId() {
+        return id;
     }
 }
