@@ -41,17 +41,17 @@ public class DeskBookingApplication {
 			Office sandvika = officeRepository.save(new Office("Sandvika", "Bærum"));
 			Office majorstua = officeRepository.save(new Office("Majorstua", "Oslo"));
 
-			Desk drammen1 = deskRepository.save(new Desk(new Desk.DeskId(1L, drammen)));
-			Desk drammen2 = deskRepository.save(new Desk(new Desk.DeskId(2L, drammen)));
-			Desk drammen3 = deskRepository.save(new Desk(new Desk.DeskId(3L, drammen)));
+			Desk drammen1 = deskRepository.save(new Desk(drammen, "Hjørnekontoret"));
+			Desk drammen2 = deskRepository.save(new Desk(drammen, "Øy 1, pult 1"));
+			Desk drammen3 = deskRepository.save(new Desk(drammen, "Øy 1, pult 2"));
 
-			Desk sandvika1 = deskRepository.save(new Desk(new Desk.DeskId(1L, sandvika)));
-			Desk sandvika2 = deskRepository.save(new Desk(new Desk.DeskId(2L, sandvika)));
-			Desk sandvika3 = deskRepository.save(new Desk(new Desk.DeskId(3L, sandvika)));
+			Desk sandvika1 = deskRepository.save(new Desk(sandvika, "Møterommet uten lyspærer"));
+			Desk sandvika2 = deskRepository.save(new Desk(sandvika, "Parkeringsplassen"));
+			Desk sandvika3 = deskRepository.save(new Desk(sandvika, "Taket utenfor kantina"));
 
-			Desk majorstua1 = deskRepository.save(new Desk(new Desk.DeskId(1L, majorstua)));
-			Desk majorstua2 = deskRepository.save(new Desk(new Desk.DeskId(2L, majorstua)));
-			Desk majorstua3 = deskRepository.save(new Desk(new Desk.DeskId(3L, majorstua)));
+			Desk majorstua1 = deskRepository.save(new Desk(majorstua, "Øy 1, pult 1"));
+			Desk majorstua2 = deskRepository.save(new Desk(majorstua, "Øy 1, pult 2"));
+			Desk majorstua3 = deskRepository.save(new Desk(majorstua, "Øy 1, pult 3"));
 
 			bookingRepository.save(new Booking(dai, drammen1, LocalDateTime.now(), LocalDateTime.now().plusHours(8)));
 			bookingRepository.save(new Booking(ule, sandvika1, LocalDateTime.now(), LocalDateTime.now().plusHours(8)));

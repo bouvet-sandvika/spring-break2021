@@ -12,7 +12,7 @@ public class Employee {
 
     private String firstName;
     private String lastName;
-    @OneToMany
+    @OneToMany(mappedBy = "booker")
     private List<Booking> bookings;
 
     public Employee() {

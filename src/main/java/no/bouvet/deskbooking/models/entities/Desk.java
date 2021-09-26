@@ -1,55 +1,54 @@
 package no.bouvet.deskbooking.models.entities;
 
-import javax.persistence.*;
-import java.io.Serializable;
 import java.util.List;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Desk {
 
-    @EmbeddedId
-    private DeskId id;
-    @OneToMany
+    @Id
+    @GeneratedValue
+    private Long id;
+
+    @OneToMany(mappedBy = "booker")
     private List<Booking> bookings;
 
+    @ManyToOne
+    private Office office;
+
+    private String deskLabel;
+
     public Desk() {
+
     }
 
-    public Desk(DeskId id) {
-        this.id = id;
+    public Desk(Office office, String deskLabel) {
+        this.office = office;
+        this.deskLabel = deskLabel;
     }
 
-    @Override
-    public String toString() {
-        return String.format(
-                "Desk[id='%s', office='%s']",
-                id.id, id.office.toString());
-    }
-
-    public DeskId getId() {
+    public Long getId() {
         return id;
     }
 
     public Office getOffice() {
-        return id.office;
+        return office;
     }
 
     public List<Booking> getBookings() {
         return bookings;
     }
 
-    @Embeddable
-    public static class DeskId implements Serializable {
-        Long id;
-        @ManyToOne
-        Office office;
-
-        public DeskId() {
-        }
-
-        public DeskId(Long id, Office office) {
-            this.id = id;
-            this.office = office;
-        }
+    @Override
+    public String toString() {
+        return "Desk{" +
+                "office=" + office +
+                ", deskLabel='" + deskLabel + '\'' +
+                '}';
     }
 }

@@ -15,7 +15,7 @@ public class Office {
 
     private String name;
     private String location;
-    @OneToMany
+    @OneToMany(mappedBy = "office")
     private List<Desk> desks;
 
     public Office() {
