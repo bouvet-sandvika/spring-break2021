@@ -16,6 +16,8 @@ og for h2 database
 		</dependency>
 ```
 
+[Lovlige søkeord i jpa metode navn](https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#jpa.query-methods.query-creation)
+
 ---
 
 [02 - Spring-web](./02%20-%20Spring%20web.md)

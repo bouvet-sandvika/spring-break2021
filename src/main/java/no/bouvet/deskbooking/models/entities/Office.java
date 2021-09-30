@@ -48,4 +48,12 @@ public class Office {
     public Long getId() {
         return id;
     }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
 }

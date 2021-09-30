@@ -44,6 +44,18 @@ public class Desk {
         return bookings;
     }
 
+    public String getDeskLabel() {
+        return deskLabel;
+    }
+
+    public void setOffice(Office office) {
+        this.office = office;
+    }
+
+    public void setDeskLabel(String deskLabel) {
+        this.deskLabel = deskLabel;
+    }
+
     @Override
     public String toString() {
         return "Desk{" +

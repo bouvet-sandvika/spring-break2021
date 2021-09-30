@@ -37,4 +37,20 @@ public class Employee {
     public String getLastName() {
         return lastName;
     }
+
+    public Long getId() {
+        return id;
+    }
+
+    public List<Booking> getBookings() {
+        return bookings;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
 }

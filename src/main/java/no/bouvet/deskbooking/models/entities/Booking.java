@@ -38,6 +38,22 @@ public class Booking {
                 booker.toString(), desk.toString(), start, end);
     }
 
+    public void setBooker(Employee booker) {
+        this.booker = booker;
+    }
+
+    public void setDesk(Desk desk) {
+        this.desk = desk;
+    }
+
+    public void setStart(LocalDateTime start) {
+        this.start = start;
+    }
+
+    public void setEnd(LocalDateTime end) {
+        this.end = end;
+    }
+
     public Long getId() {
         return id;
     }
