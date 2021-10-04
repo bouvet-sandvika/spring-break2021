@@ -17,7 +17,7 @@ public class BookingServiceImpl implements BookingService {
         if (roomNumbers.contains(roomNumber)) {
             return BookingResponseStatus.BOOKING_OK;
         } else {
-            return BookingResponseStatus.ROOM_DOES_NOT_EXIST;
+            throw new RoomDoesNotExistException("Attempted to book room " + roomNumber);
         }
     }
 
