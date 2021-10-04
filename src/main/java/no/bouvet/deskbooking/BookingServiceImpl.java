@@ -2,12 +2,15 @@ package no.bouvet.deskbooking;
 
 import java.util.List;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class BookingServiceImpl implements BookingService {
 
     private final BookingRepository bookingRepository;
 
-    BookingServiceImpl() {
-        this.bookingRepository = new BookingRepositoryImpl();
+    BookingServiceImpl(BookingRepository bookingRepository) {
+        this.bookingRepository = bookingRepository;
     }
 
     @Override
