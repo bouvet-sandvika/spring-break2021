@@ -2,25 +2,11 @@ package no.bouvet.deskbooking.models.entities;
 
 import java.util.List;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
-
-@Entity
 public class Desk {
 
-    @Id
-    @GeneratedValue
     private Long id;
-
-    @OneToMany(mappedBy = "booker")
     private List<Booking> bookings;
-
-    @ManyToOne
     private Office office;
-
     private String deskLabel;
 
     public Desk() {

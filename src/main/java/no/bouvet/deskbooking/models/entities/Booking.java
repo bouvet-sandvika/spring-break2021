@@ -2,20 +2,10 @@ package no.bouvet.deskbooking.models.entities;
 
 import java.time.LocalDateTime;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
-
-@Entity
 public class Booking {
 
-    @Id
-    @GeneratedValue
     private Long id;
-    @ManyToOne
     private Employee booker;
-    @ManyToOne
     private Desk desk;
     private LocalDateTime start;
     private LocalDateTime end;
@@ -29,7 +19,6 @@ public class Booking {
         this.start = start;
         this.end = end;
     }
-
 
     @Override
     public String toString() {

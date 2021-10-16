@@ -1,18 +1,12 @@
 package no.bouvet.deskbooking.models.entities;
 
-import javax.persistence.*;
 import java.util.List;
 
-@Entity
 public class Employee {
 
-    @Id
-    @GeneratedValue
     private Long id;
-
     private String firstName;
     private String lastName;
-    @OneToMany(mappedBy = "booker")
     private List<Booking> bookings;
 
     public Employee() {
