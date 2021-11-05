@@ -51,4 +51,12 @@ public class Desk {
                 ", deskLabel='" + deskLabel + '\'' +
                 '}';
     }
+
+    public void setOffice(Office office) {
+        this.office = office;
+    }
+
+    public void setDeskLabel(String deskLabel) {
+        this.deskLabel = deskLabel;
+    }
 }
