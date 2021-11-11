@@ -14,7 +14,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 class BookingServiceImplTest {
 
     @Autowired
-    BookingServiceImpl bookingService;
+    BookingService bookingService;
 
     @Test
     void bookRoomTest_room_not_available() {
