@@ -1,5 +1,9 @@
 package no.bouvet.deskbooking;
 
+import java.time.LocalDateTime;
+import java.util.Collection;
+import java.util.Optional;
+
 import no.bouvet.deskbooking.models.entities.Booking;
 import no.bouvet.deskbooking.models.entities.Desk;
 import no.bouvet.deskbooking.models.entities.Employee;
@@ -14,8 +18,6 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
-
-import java.time.LocalDateTime;
 
 @SpringBootApplication
 public class DeskBookingApplication {
@@ -56,6 +58,14 @@ public class DeskBookingApplication {
 			bookingRepository.save(new Booking(dai, drammen1, LocalDateTime.now(), LocalDateTime.now().plusHours(8)));
 			bookingRepository.save(new Booking(magnus, sandvika1, LocalDateTime.now(), LocalDateTime.now().plusHours(8)));
 			bookingRepository.save(new Booking(kes, drammen3, LocalDateTime.now(), LocalDateTime.now().plusHours(8)));
+
+
+
+			Optional<Booking> danielBooking = bookingRepository.findBookingByBooker_FirstName("Daniel");
+
+			Collection<Booking> alleBookinger = bookingRepository.findByDate(LocalDateTime.now().minusMinutes(10));
+
+			Collection<Booking> alleBookingerNative = bookingRepository.findByDateNative(LocalDateTime.now().minusMinutes(10));
 		};
 	}
 
