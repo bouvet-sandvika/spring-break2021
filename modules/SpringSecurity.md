@@ -140,3 +140,5 @@ Det er mulig å sende inn en liste av authenticationProviders, prøv å lag en e
 
 ### Ressurser
 [Spring Security Architecture](https://spring.io/guides/topicals/spring-security-architecture)
+
+[Authorization Architecture](https://docs.spring.io/spring-security/site/docs/5.1.x/reference/html5/#authz-arch)
